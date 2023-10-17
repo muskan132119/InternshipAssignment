@@ -2,14 +2,14 @@ import React, { useState } from "react";
 import img1 from "../../../assets/Picture.jpg";
 import img2 from "../../../assets/picture 2.png";
 import img3 from "../../../assets/picture@2x.png";
-import "./Banner.scss";
+import "./home.scss";
 import Suggestion from "./suggestion/Suggestion";
 
-const Banner = () => {
+const Home = () => {
   const [suggestion, setSuggestion] = useState();
 
   return (
-    <div className="banner">
+    <div className="home">
       <div className="left-container">
         <div className="top">
           <h1>
@@ -41,8 +41,9 @@ const Banner = () => {
         <img src={img2} alt="" />
         <img src={img3} alt="" />
       </div>
+      <div className="triangle"></div>
     </div>
   );
 };
 
-export default Banner;
+export default Home;

@@ -5,11 +5,16 @@
   padding: 0.6rem 2rem;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 20;
   .navbar-left {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    width: 60%;    
+    width: 60%;
     gap: 3rem;
     a {
       text-decoration: none;
@@ -43,7 +48,7 @@
       padding: 0.4rem 1.3rem;
       border-radius: 0.8rem;
       color: rgba(0, 118, 206, 1);
-      &:hover{
+      &:hover {
         background-color: rgb(243, 243, 243);
         cursor: pointer;
       }
@@ -51,7 +56,7 @@
         margin-right: 0;
         background-color: rgba(0, 118, 206, 1);
         color: white;
-        &:hover{
+        &:hover {
           background-color: rgba(0, 117, 206, 0.847);
         }
       }
@@ -61,7 +66,7 @@
 
 @media screen and (max-width: 980px) {
   .navbar {
-    .navbar-left{
+    .navbar-left {
       width: 75%;
       margin-right: 0.5rem;
       gap: 2rem;
@@ -69,27 +74,26 @@
   }
 }
 @media screen and (max-width: 768px) {
-  .navbar {    
-    .navbar-left{
+  .navbar {
+    .navbar-left {
       width: 80%;
       margin-right: 0.5rem;
       gap: 1rem;
     }
   }
 }
-@media screen and (max-width: 550px){
+@media screen and (max-width: 550px) {
   .navbar {
     padding: 0.4rem 0.3rem;
-    .navbar-left{
-      a{
-        font-size: 0.9rem;      
+    .navbar-left {
+      a {
+        font-size: 0.9rem;
       }
     }
-    .navbar-right{
-      .btn{
+    .navbar-right {
+      .btn {
         font-size: 0.9rem;
       }
     }
   }
 }
-

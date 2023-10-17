@@ -1,6 +1,6 @@
 import "./App.css";
 import Header from "./components/header/Header";
-import Banner from "./pages/homepage/banner/Home";
+import Banner from "./pages/homepage/home/Home";
 import Join from "./pages/homepage/join/Join.jsx";
 
 function App() {
