@@ -1,6 +1,8 @@
 .suggested-item{
     font-size: 1rem;    
     padding: 0.5rem;    
+    z-index: 20;
+    position: relative;
     &:hover{
         background-color: aliceblue;
         cursor: pointer;

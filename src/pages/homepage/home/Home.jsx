@@ -4,9 +4,20 @@ import img2 from "../../../assets/picture 2.png";
 import img3 from "../../../assets/picture@2x.png";
 import "./home.scss";
 import Suggestion from "./suggestion/Suggestion";
+import axios from "axios";
 
 const Home = () => {
   const [suggestion, setSuggestion] = useState();
+
+  const Query = async (value) => {
+    if(value.length===0){
+      setSuggestion([]);
+      return;
+    }
+    const {data} = await axios.get(`http://localhost:3000/data?name_like=${value}`);
+    console.log(data);
+    setSuggestion(data)
+  }  
 
   return (
     <div className="home">
@@ -25,12 +36,12 @@ const Home = () => {
         </div>
         <div className="bottom">
           <div className="searchBox">
-            <input type="text" placeholder="Search here.." />
+            <input type="text" placeholder="Search here.." onChange={(e)=>Query(e.target.value)} />
             <div className="search-btn">Search</div>
           </div>
           <div className="suggestion" style={{display: !suggestion?.length && "none"}}>
             {suggestion?.map((item, i) => {
-              return <Suggestion value={item} key={i} />;
+              return <Suggestion item={item} key={i} />;
             })}
           </div>
         </div>
